@@ -21,6 +21,8 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 #Hard Level - Order of characters randomised:
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
 
+#Method one (password randomised)
+
 password = ''
 
 lelist = 0
@@ -61,3 +63,40 @@ for char in [*chosenle, *chosensy, *chosennu]:
 
 
 print(password)
+
+
+#Method two (password not randomised)
+
+passwordTwo = ''
+
+for char in range(1, nr_letters+1):
+  passwordTwo += random.choice(letters)
+
+for char in range(1, nr_symbols+1):
+  passwordTwo += random.choice(symbols)
+
+for char in range(1, nr_numbers+1):
+  passwordTwo += random.choice(numbers)
+
+print(passwordTwo)
+
+#Method three (password randomised)
+
+passwordThree = []
+passwordThreeString = ''
+
+for char in range(1, nr_letters+1):
+  passwordThree += random.choice(letters)
+
+for char in range(1, nr_symbols+1):
+  passwordThree += random.choice(symbols)
+
+for char in range(1, nr_numbers+1):
+  passwordThree += random.choice(numbers)
+
+random.shuffle(passwordThree)
+
+for char in passwordThree:
+   passwordThreeString += char
+
+print(passwordThreeString)
