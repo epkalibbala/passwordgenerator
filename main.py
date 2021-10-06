@@ -34,17 +34,23 @@ for n in letters:
         lelist += 1
         lett = random.randint(0, 51)
         chosenle.append(letters[lett])
+    else:
+     break
 
 for n in symbols:
     if sylist < nr_symbols:
         sylist += 1
         lett = random.randint(0, 8)
         chosensy.append(symbols[lett])
+    else:
+     break
 
 for n in numbers:
     if nulist < nr_numbers:
         nulist += 1
         lett = random.randint(0, 9)
         chosennu.append(numbers[lett])
+    else:
+     break
 
 print([*chosenle, *chosensy, *chosennu])
